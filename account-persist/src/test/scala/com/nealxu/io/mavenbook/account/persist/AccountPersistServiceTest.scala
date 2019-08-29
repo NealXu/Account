@@ -2,11 +2,19 @@ package com.nealxu.io.mavenbook.account.persist
 
 import org.scalatest.FlatSpec
 import org.scalatest.BeforeAndAfterEach
+import org.scalatest.BeforeAndAfterAll
+import org.springframework.context.support.ClassPathXmlApplicationContext
 
-class AccountPersistServiceTest extends FlatSpec with BeforeAndAfterEach {
+class AccountPersistServiceTest extends FlatSpec with BeforeAndAfterEach with BeforeAndAfterAll {
 
-  private val filePath = "E:\\tmp\\account.xml"
-  private val accountPersistService = AccountPersistServiceImpl(filePath)
+//  private val filePath = "E:\\tmp\\account.xml"
+//  private val accountPersistService = AccountPersistServiceImpl(filePath)
+  private var accountPersistService: AccountPersistService = _
+
+  override def beforeAll(): Unit = {
+    val ctx = new ClassPathXmlApplicationContext("account-persist.xml")
+    accountPersistService = ctx.getBean("accountPersistService").asInstanceOf[AccountPersistService]
+  }
 
   override def beforeEach(): Unit = {
     accountPersistService.deleteAllAccount()

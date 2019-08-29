@@ -27,7 +27,7 @@ class AccountEmailServiceTest extends FlatSpec with BeforeAndAfterAll {
 
   "sendMail" should "work as expecting" in {
     val ctx = new ClassPathXmlApplicationContext("account-email.xml")
-    val accountEmailService= ctx.getBean("accountEmailService").asInstanceOf[AccountEmailService]
+    val accountEmailService = ctx.getBean("accountEmailService").asInstanceOf[AccountEmailService]
     val subject = "Test Subject"
     val htmlText = "<h3>Test</h3>"
     val to = "test2@gmail.com"
