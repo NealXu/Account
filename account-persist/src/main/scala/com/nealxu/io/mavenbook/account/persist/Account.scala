@@ -5,5 +5,5 @@ case class Account(
                     name: String,
                     email: String,
                     password: String,
-                    activated: Boolean = false
+                    var activated: Boolean = false
                   )

@@ -3,7 +3,6 @@ package com.nealxu.io.mavenbook.account.email
 import com.icegreen.greenmail.util.{GreenMail, GreenMailUtil, ServerSetup}
 import org.scalatest.FlatSpec
 import org.scalatest.BeforeAndAfterAll
-//import org.scalatest.BeforeAndAfterEach
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
 class AccountEmailServiceTest extends FlatSpec with BeforeAndAfterAll {
