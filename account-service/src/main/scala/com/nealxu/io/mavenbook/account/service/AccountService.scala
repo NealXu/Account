@@ -1,4 +1,4 @@
-package com.nealxu.io.mavenbook
+package com.nealxu.io.mavenbook.account.service
 
 trait AccountService {
 

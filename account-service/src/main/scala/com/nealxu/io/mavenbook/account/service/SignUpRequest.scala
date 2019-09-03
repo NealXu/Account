@@ -1,4 +1,4 @@
-package com.nealxu.io.mavenbook
+package com.nealxu.io.mavenbook.account.service
 
 case class SignUpRequest(id: String,
                          email: String,
@@ -6,9 +6,5 @@ case class SignUpRequest(id: String,
                          password: String,
                          confirmPassword: String,
                          captchaKey: String,
-                         captchaValue: String) {
-
-  def getActivateServiceUrl: String = {
-    "https://github.nealxu.io/"
-  }
-}
+                         captchaValue: String,
+                         activateServiceUrl: String)

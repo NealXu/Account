@@ -1,8 +1,9 @@
-package com.nealxu.io.mavenbook
+package com.nealxu.io.mavenbook.account.service
 
 import com.nealxu.io.mavenbook.account.captcha.{AccountCaptchaException, AccountCaptchaService, RandomGenerator}
 import com.nealxu.io.mavenbook.account.email.{AccountEmailException, AccountEmailService}
 import com.nealxu.io.mavenbook.account.persist.{Account, AccountPersistException, AccountPersistService}
+
 import scala.collection.mutable
 
 class AccountServiceImpl(
@@ -56,7 +57,7 @@ class AccountServiceImpl(
 
       val activationId = RandomGenerator.getRandomString
       activationMap.put(activationId, account.id)
-      val link = signUpRequest.getActivateServiceUrl + s"?key=$activationId"
+      val link = signUpRequest.activateServiceUrl + s"?key=$activationId"
 
       accountEmailService.sendMail(account.email, "Please Activate Your Account", link)
     } catch {
