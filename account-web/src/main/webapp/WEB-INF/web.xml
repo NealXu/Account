@@ -18,15 +18,15 @@
         <servlet-class>com.nealxu.io.mavenbook.account.web.CaptchaImageServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CaptchaImageServlet</servlet-name>
+        <servlet-name>SignUpServlet</servlet-name>
         <servlet-class>com.nealxu.io.mavenbook.account.web.SignUpServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CaptchaImageServlet</servlet-name>
+        <servlet-name>ActivateServlet</servlet-name>
         <servlet-class>com.nealxu.io.mavenbook.account.web.ActivateServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CaptchaImageServlet</servlet-name>
+        <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.nealxu.io.mavenbook.account.web.LoginServlet</servlet-class>
     </servlet>
 

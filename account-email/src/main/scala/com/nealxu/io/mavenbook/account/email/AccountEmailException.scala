@@ -1,9 +1,9 @@
 package com.nealxu.io.mavenbook.account.email
 
-class AccountEmailException extends Exception {
+class AccountEmailException(msg: String, e: Throwable) extends Exception(msg, e) {
 
-  def this(msg: String, e: Exception) = {
-    this
+  def this(msg: String) = {
+    this(msg, null)
   }
 
 }

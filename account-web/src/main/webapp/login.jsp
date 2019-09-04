@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
 <html>
 <head>
 <style type="text/css">
@@ -14,11 +14,11 @@ button {margin: 20px 20px 10px 110px}
 
 <div class="text-field">
 
-<h2>账户登录</h2>
+<h2>Account Login</h2>
 <form name="login" action="login" method="post">
-<label>账户ID：</label><input type="text" name="id"></input><br/>
-<label>密码：</label><input type="password" name="password"></input><br/>
-<button>确认并提交</button>
+<label>Account ID：</label><input type="text" name="id"></input><br/>
+<label>Password: </label><input type="password" name="password"></input><br/>
+<button>Submit</button>
 </form>
 </div>
 

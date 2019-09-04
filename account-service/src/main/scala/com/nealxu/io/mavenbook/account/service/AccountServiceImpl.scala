@@ -94,19 +94,24 @@ class AccountServiceImpl(
     try {
       val account = accountPersistService.readAccount(id)
 
+      println("start login")
       if (account == null) {
+        println("Account does not exist.")
         throw new AccountServiceException(s"Account does not exist.")
       }
 
       if (!account.activated) {
+        println("Account is disabled.")
         throw new AccountServiceException(s"Account is disabled.")
       }
 
       if (!account.password.equals(password)) {
+        println("Incorrect password.")
         throw new AccountServiceException(s"Incorrect password.")
       }
     } catch {
       case e: AccountPersistException =>
+        println("Unable to log in.")
         throw new AccountServiceException(s"Unable to log in.", e)
     }
   }

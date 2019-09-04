@@ -1,9 +1,9 @@
 package com.nealxu.io.mavenbook.account.persist
 
-class AccountPersistException extends Exception {
+class AccountPersistException(msg: String, e: Throwable) extends Exception(msg, e) {
 
-  def this(msg: String, e: Exception) = {
-    this
+  def this(msg: String) = {
+    this(msg, null)
   }
 
 }

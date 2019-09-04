@@ -21,7 +21,7 @@ class SignUpServlet extends HttpServlet {
 
   @throws(classOf[IOException])
   @throws(classOf[ServletException])
-  override def doGet(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
+  override def doPost(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
     val id = req.getParameter("id")
     val email = req.getParameter("email")
     val name = req.getParameter("name")
@@ -45,8 +45,8 @@ class SignUpServlet extends HttpServlet {
         service.signUp(request)
         resp.getWriter.print("Account is created, please check your mail box for activation link.")
       } catch {
-        case _: AccountServiceException =>
-          resp.sendError(400, "Unable to activate account")
+        case e: AccountServiceException =>
+          resp.sendError(400, e.getMessage)
       }
     }
   }

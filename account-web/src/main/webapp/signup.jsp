@@ -1,5 +1,5 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" %>
-<%@ page import="com.juvenxu.mvnbook.account.service.*,
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
+<%@ page import="com.nealxu.io.mavenbook.account.service.*,
   org.springframework.context.ApplicationContext,
   org.springframework.web.context.support.WebApplicationContextUtils"%>
 <html>
@@ -24,18 +24,18 @@ String captchaKey = accountervice.generateCaptchaKey();
 
 <div class="text-field">
 
-<h2>ע�����˻�</h2>
+<h2>Account Register</h2>
 <form name="signup" action="signup" method="post">
-<label>�˻�ID��</label><input type="text" name="id"></input><br/>
-<label>Email��</label><input type="text" name="email"></input><br/>
-<label>��ʾ���ƣ�</label><input type="text" name="name"></input><br/>
-<label>���룺</label><input type="password" name="password"></input><br/>
-<label>ȷ�����룺</label><input type="password" name="confirm_password"></input><br/>
-<label>��֤�룺</label><input type="text" name="captcha_value"></input><br/>
+<label>Account ID</label><input type="text" name="id"></input><br/>
+<label>Email</label><input type="text" name="email"></input><br/>
+<label>Name</label><input type="text" name="name"></input><br/>
+<label>Password</label><input type="password" name="password"></input><br/>
+<label>Confirm Password</label><input type="password" name="confirm_password"></input><br/>
+<label>Captcha</label><input type="text" name="captcha_value"></input><br/>
 <input type="hidden" name="captcha_key" value="<%=captchaKey%>"/>
 <img src="<%=request.getContextPath()%>/captcha_image?key=<%=captchaKey%>"/>
 </br>
-<button>ȷ�ϲ��ύ</button>
+<button>Submit</button>
 </form>
 </div>
 

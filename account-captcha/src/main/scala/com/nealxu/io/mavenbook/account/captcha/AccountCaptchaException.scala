@@ -1,13 +1,9 @@
 package com.nealxu.io.mavenbook.account.captcha
 
-class AccountCaptchaException extends Exception {
+class AccountCaptchaException(msg: String, e: Throwable) extends Exception(msg, e) {
 
-  def this(msg: String) ={
-    this
-  }
-
-  def this(msg: String, e: Exception) ={
-    this
+  def this(msg: String) = {
+    this(msg, null)
   }
 
 }
