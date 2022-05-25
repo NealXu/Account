@@ -17,7 +17,7 @@
     </modules>
 
     <properties>
-        <springframework.version>2.5.6</springframework.version>
+        <springframework.version>5.2.22.RELEASE</springframework.version>
         <scala.version>2.11.8</scala.version>
         <scala.compat.version>2.11</scala.compat.version>
         <scalatest.version>3.0.5</scalatest.version>
